@@ -15,3 +15,16 @@ def hsl_to_rgb(h, s, l):
 
 def set_pixel_tuple(x, y, color):
     unicornhat.set_pixel(x, y, color[0], color[1], color[2])
+
+
+def show_all_pixels(r, g, b, brightness=0.2):
+    unicornhat.off()
+    unicornhat.brightness(brightness)
+
+    grid = [
+        [(r, g, b) for col in xrange(NUM_COLS)]
+        for row in xrange(NUM_ROWS)
+    ]
+
+    unicornhat.set_pixels(grid)
+    unicornhat.show()
