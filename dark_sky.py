@@ -95,15 +95,16 @@ for x in xrange(unicorntools.NUM_COLS):
     if forecast_point == -1:
         continue
 
-    for y in xrange(forecast_point):
+    for y in xrange(forecast_point + 1):
 
-        # print x, y
+        if y >= 0:
 
-        unicorntools.set_pixel_tuple(
-            x,
-            y,  # adjusted_prob_forecast_data[forecast_point],
-            COLOR
-        )
+            # print x, y
+            unicorntools.set_pixel_tuple(
+                x,
+                y,  # adjusted_prob_forecast_data[forecast_point],
+                COLOR
+            )
 
 unicornhat.show()
 
