@@ -17,7 +17,7 @@ def set_pixel_tuple(x, y, color):
     unicornhat.set_pixel(x, y, color[0], color[1], color[2])
 
 
-def show_all_pixels(r, g, b, brightness=0.2):
+def show_all_pixels(r, g, b, brightness=0.5):
     unicornhat.off()
     unicornhat.brightness(brightness)
 
