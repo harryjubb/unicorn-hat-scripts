@@ -1,2 +1,2 @@
 # unicorn-hat-scripts
-My projects/scripts for Pimoroni's Raspberry Pi Unicorn HAT
+My scripts and projects for Pimoroni's Raspberry Pi Unicorn HAT
