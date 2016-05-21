@@ -25,6 +25,8 @@ with open('location.txt', 'rb') as fo:
     location = eval(fo.read().strip())
 
 # location = (0.0, 0.0)
+location = (52.2, -0.55) # NORTHAMPTON
+location = (52.2098,0.1115) # CAMBRIDGE
 latitude = location[0]
 longitude = location[1]
 
@@ -81,16 +83,21 @@ print adjusted_prob_forecast_data
 print adjusted_prob_forecast_data
 
 for x in xrange(unicorntools.NUM_COLS):
-    print x, adjusted_prob_forecast_data[x]
+
     forecast_point = adjusted_prob_forecast_data[
         (unicorntools.NUM_COLS - 1) - x
     ]
-    print
+    print x, adjusted_prob_forecast_data[x], forecast_point
+    # print
     # print adjusted_prob_forecast_data[x]
 
-    for y in xrange(adjusted_prob_forecast_data[forecast_point] + 1):
+    # SKIP IF NO LEDS TO BE LIT (NO RAIN)
+    if forecast_point == -1:
+        continue
 
-        print x, y
+    for y in xrange(forecast_point):
+
+        # print x, y
 
         unicorntools.set_pixel_tuple(
             x,
