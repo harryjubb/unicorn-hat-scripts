@@ -18,7 +18,6 @@ def set_pixel_tuple(x, y, color):
 
 
 def show_all_pixels(r, g, b, brightness=0.5):
-    unicornhat.off()
     unicornhat.brightness(brightness)
 
     grid = [
