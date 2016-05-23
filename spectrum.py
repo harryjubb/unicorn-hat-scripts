@@ -1,8 +1,8 @@
 import unicorntools
 import time
 
-NUM_COLORS = 100000
-WAIT_TIME = 0.001
+NUM_COLORS = 10000
+WAIT_TIME = 0.1
 
 hue = 0
 
